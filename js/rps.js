@@ -23,9 +23,38 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let choice = prompt("What will you choice for rock paper scissors")
+    let choice = prompt("What will you choose for rock paper scissors")
     return choice.toLowerCase()
 }
 
-getHumanChoice()
-getComputerChoice()
+function giveWin(toWho) {
+}
+
+function playRound(humChoice, compChoice) {
+    if (humChoice === "rock" && compChoice === "scissors"
+        || humChoice === "scissors" && compChoice === "paper"
+        || humChoice === "paper" && compChoice === "rock") {
+        //human wins
+        humanScore += 1
+        console.log(`${humChoice} Beats ${compChoice}, You Won!`)
+        console.log(`The new score is ${humanScore} ( <= you) ${computerScore} (<= computer)`)
+    } else if (compChoice === "rock" && humChoice === "scissors"
+        || compChoice === "scissors" && humChoice === "paper"
+        || compChoice === "paper" && humChoice === "rock") {
+        // computer wins
+        computerScore += 1
+        console.log(`${compChoice} Beats ${humChoice}, You Lost.`)
+        console.log(`The new score is ${humanScore} ( <= you) ${computerScore} (<= computer)`)
+    } else {
+        // they drew so the score stays the same
+        console.log("It was a draw")
+    }
+}
+
+let humanScore = 0;
+let computerScore = 0;
+
+const hChoice = getHumanChoice()
+const cChoice = getComputerChoice()
+
+playRound(hChoice, cChoice)
