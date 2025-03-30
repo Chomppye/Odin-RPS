@@ -1,0 +1,49 @@
+body {
+    background-color: beige;
+}
+
+#win-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+#current-round-score {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 25%;
+}
+
+#overall-score {
+   position: absolute;
+   bottom: 50%;
+   transform: translateY(-50%);
+   left: 5%;
+}
+
+.OS {
+    position: absolute;
+    bottom: 50%;
+    left: 4%;
+}
+
+.csc {
+    position: absolute;
+    top: 70%;
+    left: 48%;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-content: end;
+    margin-top: 15%;
+    gap: 15px;
+}
+
+button {
+    padding: 5px 10px 5px 10px;
+}
+
